@@ -1,0 +1,110 @@
+.container {
+    min-height: 100vh;
+    background-color: #f7fafc;
+    padding: 1.5rem;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #2d3748;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navLink {
+    color: #4a5568;
+    transition: color 0.3s;
+  }
+  
+  .navLink:hover {
+    color: #2d3748;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .cardIcon {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+  
+  .cardText {
+    color: #2d3748;
+  }
+  
+  .cardSubText {
+    color: #718096;
+  }
+  
+  .tableContainer {
+    overflow-x: auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tableHeader {
+    padding: 0.75rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: medium;
+    color: #718096;
+    text-transform: uppercase;
+  }
+  
+  .tableCell {
+    padding: 0.75rem;
+    text-align: left;
+    font-size: 0.875rem;
+    color: #2d3748;
+  }
+  
+  .statusBadge {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+  }
+  
+  .statusSubmitted {
+    background-color: #f0fff4;
+    color: #48bb78;
+  }
+  
+  .statusPending {
+    background-color: #fefcbf;
+    color: #d69e2e;
+  }
+  
+  .chartContainer {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+  

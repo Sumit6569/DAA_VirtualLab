@@ -1,0 +1,231 @@
+/* General Navbar styling */
+.navbar {
+  display: flex;
+  width: 100% !important;
+  flex-wrap: wrap;
+  background-color: white;
+  position: sticky;
+
+  z-index: 10;
+}
+
+/* Inner container for navbar items */
+.nav-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.nav-comp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* padding: 1rem; */
+}
+
+/* Logo styling */
+.img {
+  display: flex;
+  align-items: center;
+}
+
+.profileUser {
+  width: "2rem";
+  height: "2rem";
+  border-radius: 50%;
+}
+
+/* Right-aligned nav links */
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: right !important;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+  margin-left: 1.8rem;
+  font-size: medium;
+}
+
+.nav-link:hover {
+  color: blue;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.dropdown.open .dropdown-menu {
+  display: flex; /* Show the dropdown when open */
+  flex-direction: column; /* Stack items vertically */
+}
+
+/* Additional styling for the dropdown items */
+.dropdown-menu a {
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #10acea;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.btn {
+  margin-left: 1rem;
+}
+
+/* Responsive Styles */
+.menu-toggle {
+  display: none;
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+
+.menu-toggle.open .fa-bars {
+  display: none;
+}
+
+.menu-toggle.open .fa-times {
+  display: block;
+}
+
+.customDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.customProfileUser {
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.customProfileUser:hover {
+  transform: scale(1.1);
+}
+
+.customDropdownMenu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #06050f;
+  box-shadow: 0px 8px 16px rgba(141, 98, 98, 0.2);
+  padding: 10px 0;
+  min-width: 160px;
+  right: 20%;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.customDropdown:hover .customDropdownMenu {
+  display: block; /* Show on hover */
+  color: red;
+}
+
+.customDropdownItem {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.customDropdownItem:hover {
+  background-color: #14a0dc;
+}
+
+/* Full-width navbar-nav on mobile */
+@media (max-width: 750px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    width: 100% !important; /* Full width on mobile */
+    background-color: rgb(225, 231, 245);
+    position: absolute;
+    top: 100%; /* Push below the navbar */
+    left: 0;
+    padding: 1rem;
+    gap: 0rem;
+    row-gap: 0px !important;
+  }
+  .nav-comp {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-nav .dropdown-menu {
+    position: static !important;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav.active {
+    align-items: center;
+    display: flex; /* Show navbar-nav when active */
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    width: 100%;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  .profileUser {
+    margin-top: 1rem;
+    margin-left: 1.3rem;
+  }
+
+  .customDropdownMenu {
+    right: 4%;
+    left: 5%;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

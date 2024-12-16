@@ -1,0 +1,150 @@
+.dashboard-container {
+    min-height: 100vh;
+    background-color: #f7fafc;
+    padding: 24px;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  
+  .dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+  }
+  
+  .dashboard-nav a {
+    color: #4a5568;
+    text-decoration: none;
+    margin-right: 16px;
+  }
+  
+  .dashboard-nav a:hover {
+    color: #2d3748;
+  }
+  
+  .logout-link {
+    color: #e53e3e;
+  }
+  
+  .overview-cards {
+    /* display: flex; */
+    flex-direction: row;
+    /* display: grid; */
+    display: inline-flex;
+    /* grid-template-rows: 1fr; */
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .overview-cards .card {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+    /* display: flex; */
+    flex-direction: row;
+    align-items: center;
+    transition: transform 0.3s;
+  }
+  
+  .overview-cards .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .icon {
+    height: 48px;
+    width: 48px;
+    margin-right: 16px;
+  }
+  
+  .completed-assignments .icon {
+    color: #4299e1;
+  }
+  
+  .pending-assignments .icon {
+    color: #ecc94b;
+  }
+  
+  .classmates .icon {
+    color: #48bb78;
+  }
+  
+  .card-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+  }
+  
+  .card-label {
+    color: #718096;
+  }
+  
+  .activities-table {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .table-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 16px;
+  }
+  
+  .activities-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .activities-table th, .activities-table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 0.875rem;
+    color: #2d3748;
+  }
+  
+  .activities-table th {
+    color: #718096;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .activities-table .status {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+  }
+  
+  .status.completed {
+    background-color: #c6f6d5;
+    color: #2f855a;
+  }
+  
+  .status.pending {
+    background-color: #faf089;
+    color: #d69e2e;
+  }
+  
+  .performance-chart {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  
+  .chart-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 16px;
+  }
+  

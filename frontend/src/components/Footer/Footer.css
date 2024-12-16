@@ -1,0 +1,161 @@
+/* Footer Base Styles */
+.footer {
+  background-color: #1a202c; /* Dark background color */
+  padding: 1.5rem; /* Reduce padding for mobile */
+  color: #e2e8f0; /* Light text color */
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 48rem; /* Similar to lg:max-w-4xl */
+  margin: 0 auto;
+}
+
+.team-title {
+  font-size: 1.5rem; /* Tailwind's text-2xl */
+  font-weight: bold;
+  color: #63b3ed; /* Blue accent for the title */
+  margin-bottom: 1.5rem; /* Reduced margin for mobile */
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 22%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.member-info {
+  font-size: 0.875rem; /* text-sm */
+  color: #e2e8f0; /* Gray text for member details */
+}
+
+.member-name {
+  font-weight: bold;
+}
+
+.member-role {
+  font-style: italic;
+}
+
+.head {
+  color: #feb2b2; /* Accent color for Head of the team */
+}
+
+.head-badge {
+  display: inline-block;
+  background-color: #feb2b2; /* Badge for Head */
+  color: #1a202c; /* Dark text for contrast */
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem; /* Badge font size */
+  margin-top: 0.5rem;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  font-size: 0.875rem; /* Small text size */
+  color: #a0aec0; /* Lighter text for footer bottom */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Extra Large Desktops */
+@media (min-width: 1440px) {
+  .team-member {
+    width: 18%; /* Wider layout for very large screens */
+  }
+}
+
+/* Large desktops */
+@media (max-width: 1280px) {
+  .team-member {
+    width: 20%; /* Slightly smaller width on large desktops */
+  }
+}
+
+/* Laptops */
+@media (max-width: 1024px) {
+  .team-member {
+    width: 45%; /* Two columns for tablets/laptops */
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .team-member {
+    width: 100%; /* Full width for single column layout on mobile */
+    margin-bottom: 2rem; /* Add space between members */
+  }
+}
+
+/* Small tablets */
+@media (max-width: 600px) {
+  .team-title {
+    font-size: 1.25rem; /* Smaller title */
+  }
+
+  .team-member {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem; /* Reduced padding for smaller mobile screens */
+  }
+
+  .team-title {
+    font-size: 1.1rem; /* Adjust title size for small mobile */
+    margin-bottom: 1rem; /* Reduce margin for more compact layout */
+  }
+
+  .team-member {
+    width: 100%;
+    margin-bottom: 2rem; /* Add more spacing between team members */
+  }
+
+  .member-info {
+    font-size: 0.75rem; /* Smaller text for member info */
+    line-height: 1.25rem; /* Increase line height for better readability */
+  }
+
+  .member-role {
+    font-size: 0.8rem; /* Slightly smaller role text */
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem; /* Smaller footer bottom text */
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 360px) {
+  .footer {
+    padding: 0.75rem; /* Even less padding for very small screens */
+  }
+
+  .team-title {
+    font-size: 1rem; /* Further reduced title size */
+    margin-bottom: 0.75rem; /* Less margin for tighter layout */
+  }
+
+  .team-member {
+    margin-bottom: 1.75rem; /* More space between members */
+  }
+
+  .member-info {
+    font-size: 0.7rem; /* Smallest text size for very small screens */
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem; /* Further reduced footer bottom text */
+  }
+}

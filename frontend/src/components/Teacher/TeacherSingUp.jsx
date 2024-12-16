@@ -1,3 +1,122 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import './TeacherSignUp.css'; // Corrected CSS import to match the file name
+import Slider from '../Slider/Slider';
+import {useDispatch} from "react-redux";
+import { teacherRegister } from '../../action/teacherAction';
+import {toast} from "react-toastify"
+import { useNavigate } from 'react-router-dom';
+
+function TeacherSignUp() {
+  const  dispatch = useDispatch()
+  const navigate = useNavigate();
+
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [conformPassword, setConformPassword] = useState('');
+
+    const handleTeacherSignup = async (e) => {
+      e.preventDefault();
+      // setLoading(true); 
+      
+      const myForm = new FormData();
+  
+      myForm.append("fullName", fullName);
+      myForm.append("email", email);
+      myForm.append("password", password);
+      myForm.append("conformPassword", conformPassword)
+
+      try {
+        const response = await dispatch(teacherRegister(myForm));
+        if (response.status === 200) {
+            toast.success("Teacher register Successfully!");
+            setFullName('');
+            setEmail('');
+            setPassword('');
+            setConformPassword('');
+
+            // setLoading(false); 
+            navigate("/teacher/login")
+        } else {
+            toast.error(response?.data?.message || "Login failed!", 'error');
+            // setLoading(false); // Hide spinner if login fails
+        }
+      } catch (err) {
+          toast.error(err.response?.data?.message || err.message || 'Login failed!', 'error');
+          // setLoading(false); // Hide spinner after error
+      }
+    };
+
+  return (
+    <div style={{ position: 'relative', height: '100vh' }}>
+      <Slider /> {/* Background Slider */}
+      <div className="container">
+        <div className="inner-container">
+          <div className="logo">
+            <img src="/logo.png" alt="Logo" />
+          </div>
+
+          <p className="title">Signup as a Teacher</p>
+
+          <form onSubmit={handleTeacherSignup}>
+            <div className="form">
+              <label htmlFor="fullName">Full Name:</label>
+              <input
+                type="fullName"
+                id="fullName"
+                placeholder="* Enter name"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                required
+                className="input"
+              />
+            </div>
+
+            <div className="form">
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="* Enter email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="input"
+              />
+            </div>
+            
+            <div className="form">
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="* Enter password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                className="input"
+              />
+            </div>
+
+            <div className="form">
+              <label htmlFor="conformPassword">Conform Password:</label>
+              <input
+                type="conformPassword"
+                id="conformPassword"
+                placeholder="* Enter conform password"
+                value={conformPassword}
+                onChange={(e) => setConformPassword(e.target.value)}
+                required
+                className="input"
+              />
+            </div>
+
+            <div className="form">
+              <button type="submit" className="submit-button">Login</button>
+            </div>
+          </form>
+=======
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./TeacherSignUp.css"; // Importing the CSS file
@@ -208,6 +327,7 @@ function TeacherSignUp() {
               Login here
             </Link>
           </p>
+>>>>>>> upstream/main
         </div>
       </div>
     </div>

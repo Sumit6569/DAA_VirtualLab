@@ -1,0 +1,241 @@
+/* Main container */
+.teacher-dash {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: white;
+  }
+  
+  /* Toggle Button */
+  .toggle-button {
+    position: fixed;
+    z-index: 10;
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Sidebar (Off-Canvas) */
+  .sidebar {
+    position: fixed;
+    top: 13%;
+    left: -250px;
+    width: 245px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+  
+  .sidebar.show {
+    left: 0;
+  }
+  
+  .dashboard-menu h2 {
+    color: #f5a623;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  /* Header Component */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.header div {
+    display: flex;
+    flex-direction: column;
+}
+
+.header div span:first-child {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4a90e2;
+}
+
+.header div span:last-child {
+    font-size: 1rem;
+    color: #666;
+}
+
+.header a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4a90e2;
+}
+
+  
+  .menu-item {
+    margin-bottom: 1rem;
+  }
+  
+  .menu-item span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+  .menu-item ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .menu-item li {
+    color: #bbb;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    cursor: pointer;
+  }
+  
+  .menu-item li:hover {
+    color: #f5a623;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex-grow: 1;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    padding: 1.5rem;
+  }
+  
+  .main-content.sidebar-open {
+    margin-left: 250px;
+  }
+  
+ /* .component styling with flex-wrap */
+.component {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+  gap: 1rem; /* Adds space between items */
+  padding: 0.8rem;
+  justify-content: space-between;
+  border-radius: 0.7rem;
+  background-color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  flex: 1 1 250px; /* Ensures each card has a minimum width */
+  background: white;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 0.75rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section { background-color: #4a90e2; }
+.total-students { background-color: #50e3c2; }
+.total-submitted { background-color: #f5a623; }
+.left-submission { background-color: #e94e77; }
+
+.card-content {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+  /* Assignment List */
+.assignment {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: .7rem;
+  background-color: #ffffff;
+  margin: 20px 0px;
+}
+
+.assignment div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #26cf94;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  width: 200px;
+}
+
+.assignment button {
+  background-color: #3498db;
+  color: white;
+  
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.assignment button:hover {
+  background-color: #2980b9;
+}
+
+  .student-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat {
+    font-size: large;
+    font-weight: bolder;
+  }
+
+  .workImg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Table (Unchanged) */
+  .dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-table th, .dashboard-table td {
+    padding: 0.75rem;
+    border: 1px solid #dddddd;
+    text-align: left;
+  }
+  
+  .dashboard-table th {
+    background-color: #6abdf5;
+    font-weight: bold;
+  }
+  
+  .dashboard-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
